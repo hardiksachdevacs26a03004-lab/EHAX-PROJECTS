@@ -40,7 +40,7 @@ def LOAD():
         dict = json.load(file)
 
 
-print("WELCOME user! \n this CLI interface takes in a supported function followed by required fields as input and gives the output accordingly ;) \n\n\n suported functions are : GET, SET, DEL, SAVE, EXISTS, LOAD")
+print("WELCOME user! \n this CLI interface takes in a supported function followed by required fields separated by a COMMA AND NO SPACE as input and gives the output accordingly ;) \n\n\n suported functions are : GET, SET, DEL, SAVE, EXISTS, LOAD")
 
 dict = {}
 
@@ -48,12 +48,12 @@ while True:
 
     usr_input = input("enter the command : ")
     trunc_input = usr_input.strip()
-    refined_input = trunc_input.split()
+    refined_input = trunc_input.split(",")
 
     if not refined_input:
         continue
     elif refined_input[0] == "SET" or refined_input[0] == "set":
-        if len(refined_input<3):
+        if len(refined_input)<3:
             print("not valid format try again")
         else:
             SET(refined_input[1], refined_input[2])
