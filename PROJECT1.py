@@ -58,11 +58,20 @@ while True:
         else:
             SET(refined_input[1], refined_input[2])
     elif refined_input[0] == "GET" or refined_input[0] == "get":
-        GET(refined_input[1])
+        if len(refined_input)<2:
+            print("invalid format try again")
+        else:
+            GET(refined_input[1])
     elif refined_input[0] == "DEL" or refined_input[0] == "del":
-        DEL(refined_input[1])
+        if len(refined_input)<2:
+            print("invalid format try again")
+        else:
+            DEL(refined_input[1])
     elif refined_input[0] == "EXISTS" or refined_input[0] == "exists":
-        EXISTS(refined_input[1])
+        if(refined_input)<2:
+            print("invalid format try again")
+        else:
+            EXISTS(refined_input[1])
     elif refined_input[0] == "SAVE" or refined_input[0] == "save":
         SAVE()
     elif refined_input[0] == "LOAD" or refined_input[0] == "load":
