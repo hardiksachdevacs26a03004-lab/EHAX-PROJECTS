@@ -53,7 +53,10 @@ while True:
     if not refined_input:
         continue
     elif refined_input[0] == "SET" or refined_input[0] == "set":
-        SET(refined_input[1], refined_input[2])
+        if len(refined_input<3):
+            print("not valid format try again")
+        else:
+            SET(refined_input[1], refined_input[2])
     elif refined_input[0] == "GET" or refined_input[0] == "get":
         GET(refined_input[1])
     elif refined_input[0] == "DEL" or refined_input[0] == "del":
